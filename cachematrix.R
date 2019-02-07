@@ -38,12 +38,12 @@ cacheSolve <- function(x, ...) {
 }
 
 ## check
-A <- makeCacheMatrix(matrix(rnorm(1:100), 10, 10))
-A$get()
-A$getinverse()
-A$set(matrix(rnorm(1:36), 6, 6))
-A$get()
+M <- makeCacheMatrix(matrix(rnorm(1:100), 10, 10))
+M$get()
+M$getinverse()
+M$set(matrix(rnorm(1:36), 6, 6))
+M$get()
 
-cacheSolve(A)
-A$getinverse()
+cacheSolve(M)
+M$getinverse()
 
